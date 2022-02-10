@@ -22,3 +22,9 @@ Most general ≡ maximal elements of VS<sub>H,D</sub><br>
 Let X be an arbitrary set of instances and let H be a set of boolean-valued hypotheses defined over X.<br> Let c : X + {O, 1} be an arbitrary target concept defined over X and let D be an arbitrary set of training examples {(x, c(x))}. For all X, H, c, and D such that S and G are well defined, 
 
 ![image](https://user-images.githubusercontent.com/64849889/141342831-5dc12c05-0cc7-4e7d-b923-3a6fcabb757f.png)
+
+Proof: To prove the theorem it suffices to show that
+(1) every h satisfying the righthand side of the above expression is in VSH,D.
+(2) every member of VSH,D satisfies the right-hand side of the expression.
+
+To show (1) let g be an arbitrary member of G, s be an arbitrary member of S, and h be an arbitrary member of H, such that g>=g h>=gs. Then by the definition of S, s must be satisfied by all positive examples in D. Because h>=g s, h must also be satisfied by all positive examples in D. Similarly, by the definition of G, g cannot be satisfied by any negative example in D, and because g>=g h, h cannot be satisfied by any negative example in D. Because h is satisfied by all positive examples in D and by no negative examples in D, h is consistent with D, and therefore h is a member of VSH,D. This proves step (1). The argument for (2) is a bit more complex. It can be proven by assuming some h in VSH,D that does not satisfy the right-hand side of the expression, then showing that this leads to an inconsistency.
